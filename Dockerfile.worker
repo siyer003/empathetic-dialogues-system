@@ -1,0 +1,21 @@
+FROM python:3.12-slim
+
+WORKDIR /app
+
+# Copy and install dependencies
+COPY requirements-worker.txt ./
+RUN pip install --no-cache-dir -r requirements-worker.txt
+
+# Copy application code
+COPY services/worker.py services/utils.py ./
+COPY models ./models
+
+# Set model path for worker
+ENV MODEL_PATH=/app/models
+
+# Create non-root user for security
+RUN useradd -m app
+USER app
+
+# Run the application
+CMD ["python", "worker.py"]

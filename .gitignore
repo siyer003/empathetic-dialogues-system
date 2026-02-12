@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Environment
+.venv
+
+# OS
+.DS_Store
+
+# Models (do NOT commit)
+models/
+
+# Docker
+*.log
+
+dump.rdb

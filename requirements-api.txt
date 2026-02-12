@@ -1,0 +1,11 @@
+# API framework (for later steps)
+fastapi>=0.100.0
+uvicorn[standard]>=0.23.0
+pydantic>=2.0.0
+python-multipart>=0.0.6
+
+# Queue/Cache (for later steps)
+redis>=4.6.0
+
+# Additional utilities
+requests>=2.31.0
