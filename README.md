@@ -117,7 +117,7 @@ session:{session_id}:history
 
 ## Future Improvements
 
-- Deploy to AWS ECS / EKS
-- Add monitoring and metrics
-- Add frontend UI
-- Persist sessions in PostgreSQL
+- Add failure handling 
+- Introduce observability (metrics, logging, health checks, queue depth monitoring) for better system visibility  
+- Move from Docker Compose to Kubernetes (EKS) for orchestration, auto-restarts, and horizontal worker scaling
+- Add frontend UI 
